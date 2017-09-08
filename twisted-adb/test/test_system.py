@@ -1,12 +1,15 @@
 """System test
 """
+from __future__ import absolute_import
+import sys
 from twisted.internet import reactor
 from twisted.internet.endpoints import clientFromString
 from twisted.internet.protocol import ClientFactory
+sys.path.append('../adb')
 from adb import protocol
 
 def main():
-    endpoint = clientFromString(reactor, "tcp:localhost:5555:timeout=5")
+    endpoint = clientFromString(reactor, "tcp:10.47.112.166:5555")
 #    endpoint = clientFromString(reactor, "unix:/dev/bus/usb/001/012")
 
     factory = ClientFactory()

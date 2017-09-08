@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: twistedadb
+Version: 1.0
+Summary: Implementation of Android Debug Bridge (ADB) protocol in Python Twisted
+Home-page: UNKNOWN
+Author: Geir Sporsheim
+Author-email: gksporsh@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: adb twisted
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7

@@ -1,5 +1,5 @@
 import unittest
-from adb import protocol
+from twisted_adb.adb import protocol
 
 class AdbProtocolMessageTest(unittest.TestCase):
     def setUp(self):

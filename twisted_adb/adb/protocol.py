@@ -21,6 +21,7 @@ CMD_OKAY = 0x59414b4f
 CMD_CLSE = 0x45534c43
 CMD_WRTE = 0x45545257
 
+
 def getCommandString(commandCode):
     """Returns a readable string representation of a message code
     """
@@ -92,7 +93,8 @@ class AdbProtocolBase(protocol.Protocol):
         from a client.
         On clients, this is called when the server has replied to our CNXN
         """
-        raise NotImplementedError()
+        print systemIdentityString
+        # raise NotImplementedError()
 
     def openStream(self, stream):
         localId = len(self.streams) + 1

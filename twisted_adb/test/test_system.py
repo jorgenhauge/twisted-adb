@@ -5,11 +5,10 @@ import sys
 from twisted.internet import reactor
 from twisted.internet.endpoints import clientFromString
 from twisted.internet.protocol import ClientFactory
-sys.path.append('../adb')
-from adb import protocol
+from twisted_adb.adb import protocol
 
 def main():
-    endpoint = clientFromString(reactor, "tcp:10.47.112.166:5555")
+    endpoint = clientFromString(reactor, "tcp:10.47.112.166:5555:timeout=5")
 #    endpoint = clientFromString(reactor, "unix:/dev/bus/usb/001/012")
 
     factory = ClientFactory()
@@ -19,6 +18,7 @@ def main():
 
     def adb_CNXN(client, message):
         print "GOT MESSAGE", message
+        #def sendCommand(self, command, arg0, arg1, data)
         client.sendCommand(protocol.CMD_OPEN, 2, message.arg0, 'shell:ls\x00')
     def adb_WRTE(client, message):
         print "GOT MESSAGE", message

@@ -15,7 +15,7 @@ def get_requirements(path):
 install_requires = get_requirements(join(THIS_DIR, 'requirements.txt'))
 
 setup(
-    name='twistedadb',
+    name='twisted_adb',
     version='1.0',
     description='Implementation of Android Debug Bridge (ADB) protocol in Python Twisted',
     author='Geir Sporsheim',
